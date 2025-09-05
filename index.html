@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="tstylesheet" href="css/tstyle.css" />
+
+</head>
+
+<body>
+  <!-- Particle Background -->
+  <div class="particles" id="particles">
+    <div class="particle"
+      style="left: 753.748px; top: 533.561px; width: 3.56118px; height: 3.56118px; background-color: var(--neon-pink); box-shadow: 0 0 7.122363925262838px var(--neon-pink); opacity: 0.559606;">
+    </div>
+    <div class="particle"
+      style="left: 968.12px; top: 227.993px; width: 3.51357px; height: 3.51357px; background-color: var(--neon-pink); box-shadow: 0 0 7.0271357073464px var(--neon-pink); opacity: 0.210805;">
+    </div>
+    <div class="particle"
+      style="left: 458.324px; top: 96.9136px; width: 2.98156px; height: 2.98156px; background-color: var(--neon-purple); box-shadow: 0 0 5.9631218359208376px var(--neon-purple); opacity: 0.592586;">
+    </div>
+    <div class="particle"
+      style="left: 566.42px; top: 759.004px; width: 2.67683px; height: 2.67683px; background-color: var(--neon-purple); box-shadow: 0 0 5.353661174999077px var(--neon-purple); opacity: 0.165736;">
+    </div>
+    <div class="particle"
+      style="left: 306.467px; top: 506.564px; width: 3.55687px; height: 3.55687px; background-color: var(--neon-blue); box-shadow: 0 0 7.113747405405775px var(--neon-blue); opacity: 0.518144;">
+    </div>
+    <div class="particle"
+      style="left: 45.2275px; top: 19.9546px; width: 1.39485px; height: 1.39485px; background-color: var(--neon-purple); box-shadow: 0 0 2.7897032584980703px var(--neon-purple); opacity: 0.234844;">
+    </div>
+    <div class="particle"
+      style="left: 830.888px; top: 104.317px; width: 3.02962px; height: 3.02962px; background-color: var(--neon-purple); box-shadow: 0 0 6.05923946589501px var(--neon-purple); opacity: 0.285069;">
+    </div>
+    <div class="particle"
+      style="left: 517.481px; top: 582.17px; width: 2.48962px; height: 2.48962px; background-color: var(--neon-blue); box-shadow: 0 0 4.979245101625114px var(--neon-blue); opacity: 0.35471;">
+    </div>
+    <div class="particle"
+      style="left: 521.165px; top: 898.299px; width: 3.8292px; height: 3.8292px; background-color: var(--neon-pink); box-shadow: 0 0 7.658394876864702px var(--neon-pink); opacity: 0.250809;">
+    </div>
+    <div class="particle"
+      style="left: 89.1385px; top: 912.683px; width: 2.19571px; height: 2.19571px; background-color: var(--neon-pink); box-shadow: 0 0 4.391413610715746px var(--neon-pink); opacity: 0.313872;">
+    </div>
+    <div class="particle"
+      style="left: 304.054px; top: 633.344px; width: 3.76744px; height: 3.76744px; background-color: var(--neon-pink); box-shadow: 0 0 7.534878130297316px var(--neon-pink); opacity: 0.347154;">
+    </div>
+    <div class="particle"
+      style="left: 469.712px; top: 793.495px; width: 2.46715px; height: 2.46715px; background-color: var(--neon-pink); box-shadow: 0 0 4.934297162965501px var(--neon-pink); opacity: 0.481086;">
+    </div>
+    <div class="particle"
+      style="left: 629.843px; top: 220.826px; width: 3.07915px; height: 3.07915px; background-color: var(--neon-pink); box-shadow: 0 0 6.158296625283803px var(--neon-pink); opacity: 0.265218;">
+    </div>
+    <div class="particle"
+      style="left: 127.495px; top: 10.3088px; width: 1.77603px; height: 1.77603px; background-color: var(--neon-blue); box-shadow: 0 0 3.5520501275051903px var(--neon-blue); opacity: 0.54583;">
+    </div>
+    <div class="particle"
+      style="left: 310.285px; top: 31.7182px; width: 1.84688px; height: 1.84688px; background-color: var(--neon-blue); box-shadow: 0 0 3.6937549117760584px var(--neon-blue); opacity: 0.543043;">
+    </div>
+    <div class="particle"
+      style="left: 33.3279px; top: 366.007px; width: 2.41514px; height: 2.41514px; background-color: var(--neon-purple); box-shadow: 0 0 4.8302834770022125px var(--neon-purple); opacity: 0.596931;">
+    </div>
+    <div class="particle"
+      style="left: 517.338px; top: 886.321px; width: 2.8035px; height: 2.8035px; background-color: var(--neon-purple); box-shadow: 0 0 5.6069960784029735px var(--neon-purple); opacity: 0.303533;">
+    </div>
+    <div class="particle"
+      style="left: 642.569px; top: 442.285px; width: 1.08553px; height: 1.08553px; background-color: var(--neon-blue); box-shadow: 0 0 2.171068408635067px var(--neon-blue); opacity: 0.354657;">
+    </div>
+    <div class="particle"
+      style="left: 411.306px; top: 175.599px; width: 3.35003px; height: 3.35003px; background-color: var(--neon-purple); box-shadow: 0 0 6.700054652965539px var(--neon-purple); opacity: 0.529209;">
+    </div>
+    <div class="particle"
+      style="left: 363.757px; top: 246.613px; width: 3.75972px; height: 3.75972px; background-color: var(--neon-purple); box-shadow: 0 0 7.519445343363046px var(--neon-purple); opacity: 0.540311;">
+    </div>
+    <div class="particle"
+      style="left: 634.865px; top: 714.179px; width: 2.71504px; height: 2.71504px; background-color: var(--neon-pink); box-shadow: 0 0 5.430081724195269px var(--neon-pink); opacity: 0.564035;">
+    </div>
+    <div class="particle"
+      style="left: 162.483px; top: 484.85px; width: 2.60403px; height: 2.60403px; background-color: var(--neon-purple); box-shadow: 0 0 5.208063010438364px var(--neon-purple); opacity: 0.338637;">
+    </div>
+    <div class="particle"
+      style="left: 251.937px; top: 519.408px; width: 2.51137px; height: 2.51137px; background-color: var(--neon-blue); box-shadow: 0 0 5.022745296876983px var(--neon-blue); opacity: 0.549175;">
+    </div>
+    <div class="particle"
+      style="left: 414.628px; top: 90.1273px; width: 2.12436px; height: 2.12436px; background-color: var(--neon-purple); box-shadow: 0 0 4.2487183118197995px var(--neon-purple); opacity: 0.489509;">
+    </div>
+    <div class="particle"
+      style="left: 379.276px; top: 493.483px; width: 2.58672px; height: 2.58672px; background-color: var(--neon-purple); box-shadow: 0 0 5.173446161479194px var(--neon-purple); opacity: 0.127586;">
+    </div>
+    <div class="particle"
+      style="left: 832.009px; top: 53.2813px; width: 3.71128px; height: 3.71128px; background-color: var(--neon-purple); box-shadow: 0 0 7.422569226793918px var(--neon-purple); opacity: 0.223838;">
+    </div>
+    <div class="particle"
+      style="left: 291.729px; top: 174.329px; width: 1.4982px; height: 1.4982px; background-color: var(--neon-blue); box-shadow: 0 0 2.996395033680144px var(--neon-blue); opacity: 0.375523;">
+    </div>
+    <div class="particle"
+      style="left: 721.168px; top: 303.165px; width: 2.83544px; height: 2.83544px; background-color: var(--neon-purple); box-shadow: 0 0 5.670872221758756px var(--neon-purple); opacity: 0.340075;">
+    </div>
+    <div class="particle"
+      style="left: 923.75px; top: 471.964px; width: 1.58789px; height: 1.58789px; background-color: var(--neon-purple); box-shadow: 0 0 3.1757884836865036px var(--neon-purple); opacity: 0.213367;">
+    </div>
+    <div class="particle"
+      style="left: 96.4552px; top: 108.967px; width: 3.29606px; height: 3.29606px; background-color: var(--neon-pink); box-shadow: 0 0 6.592119066395216px var(--neon-pink); opacity: 0.374303;">
+    </div>
+    <div class="particle"
+      style="left: 1007.22px; top: 564.981px; width: 2.52303px; height: 2.52303px; background-color: var(--neon-purple); box-shadow: 0 0 5.046053016249494px var(--neon-purple); opacity: 0.373041;">
+    </div>
+    <div class="particle"
+      style="left: 183.135px; top: 331.459px; width: 3.64226px; height: 3.64226px; background-color: var(--neon-blue); box-shadow: 0 0 7.284519398048534px var(--neon-blue); opacity: 0.481368;">
+    </div>
+    <div class="particle"
+      style="left: 156.558px; top: 633.033px; width: 2.45325px; height: 2.45325px; background-color: var(--neon-blue); box-shadow: 0 0 4.906493145094832px var(--neon-blue); opacity: 0.295701;">
+    </div>
+    <div class="particle"
+      style="left: 1152.94px; top: 743.139px; width: 1.61294px; height: 1.61294px; background-color: var(--neon-purple); box-shadow: 0 0 3.2258725595312603px var(--neon-purple); opacity: 0.356182;">
+    </div>
+    <div class="particle"
+      style="left: 715.987px; top: 104.533px; width: 2.94986px; height: 2.94986px; background-color: var(--neon-blue); box-shadow: 0 0 5.899713887170401px var(--neon-blue); opacity: 0.25892;">
+    </div>
+    <div class="particle"
+      style="left: 1002.49px; top: 96.8959px; width: 1.185px; height: 1.185px; background-color: var(--neon-purple); box-shadow: 0 0 2.369999479857999px var(--neon-purple); opacity: 0.466287;">
+    </div>
+    <div class="particle"
+      style="left: 830.273px; top: 92.0489px; width: 3.17842px; height: 3.17842px; background-color: var(--neon-pink); box-shadow: 0 0 6.356850183995558px var(--neon-pink); opacity: 0.450876;">
+    </div>
+    <div class="particle"
+      style="left: 127.577px; top: 522.12px; width: 1.34724px; height: 1.34724px; background-color: var(--neon-pink); box-shadow: 0 0 2.69447722366946px var(--neon-pink); opacity: 0.359673;">
+    </div>
+    <div class="particle"
+      style="left: 675.714px; top: 512.379px; width: 3.02805px; height: 3.02805px; background-color: var(--neon-pink); box-shadow: 0 0 6.0561070498330745px var(--neon-pink); opacity: 0.328851;">
+    </div>
+    <div class="particle"
+      style="left: 907.136px; top: 601.353px; width: 1.77865px; height: 1.77865px; background-color: var(--neon-blue); box-shadow: 0 0 3.557292953748885px var(--neon-blue); opacity: 0.381603;">
+    </div>
+    <div class="particle"
+      style="left: 1013.84px; top: 56.2454px; width: 2.37765px; height: 2.37765px; background-color: var(--neon-purple); box-shadow: 0 0 4.755299325784939px var(--neon-purple); opacity: 0.595467;">
+    </div>
+    <div class="particle"
+      style="left: 118.179px; top: 355.591px; width: 3.82099px; height: 3.82099px; background-color: var(--neon-pink); box-shadow: 0 0 7.641978409893481px var(--neon-pink); opacity: 0.418582;">
+    </div>
+    <div class="particle"
+      style="left: 670.084px; top: 788.518px; width: 3.42603px; height: 3.42603px; background-color: var(--neon-pink); box-shadow: 0 0 6.852051453678611px var(--neon-pink); opacity: 0.449178;">
+    </div>
+    <div class="particle"
+      style="left: 993.699px; top: 231.938px; width: 2.44287px; height: 2.44287px; background-color: var(--neon-blue); box-shadow: 0 0 4.885743291576686px var(--neon-blue); opacity: 0.273416;">
+    </div>
+    <div class="particle"
+      style="left: 553.732px; top: 812.625px; width: 3.44408px; height: 3.44408px; background-color: var(--neon-purple); box-shadow: 0 0 6.888161772327373px var(--neon-purple); opacity: 0.140222;">
+    </div>
+    <div class="particle"
+      style="left: 555.751px; top: 902.015px; width: 2.6608px; height: 2.6608px; background-color: var(--neon-purple); box-shadow: 0 0 5.321604055036509px var(--neon-purple); opacity: 0.55299;">
+    </div>
+    <div class="particle"
+      style="left: 463.422px; top: 160.263px; width: 3.2807px; height: 3.2807px; background-color: var(--neon-purple); box-shadow: 0 0 6.5614036593960385px var(--neon-purple); opacity: 0.241247;">
+    </div>
+    <div class="particle"
+      style="left: 75.9009px; top: 24.3683px; width: 1.16491px; height: 1.16491px; background-color: var(--neon-purple); box-shadow: 0 0 2.329827329278407px var(--neon-purple); opacity: 0.351684;">
+    </div>
+    <div class="particle"
+      style="left: 1201.12px; top: 438.8px; width: 2.98465px; height: 2.98465px; background-color: var(--neon-purple); box-shadow: 0 0 5.969308255930101px var(--neon-purple); opacity: 0.441044;">
+    </div>
+    <div class="particle"
+      style="left: 7.77905px; top: 885.728px; width: 1.95173px; height: 1.95173px; background-color: var(--neon-purple); box-shadow: 0 0 3.9034504692070895px var(--neon-purple); opacity: 0.23882;">
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="min-h-screen flex items-center justify-center p-5">
+    <div class="w-full max-w-md">
+      <!-- Welcome Screen -->
+      <div id="welcome-screen" class="screen active">
+        <div class="flex flex-col items-center justify-center space-y-8">
+          <h1 class="text-5xl font-bold neon-text-blue mb-4">TIC TAC TOE</h1>
+          <div class="glass-panel p-6 w-full space-y-6">
+            <div class="mb-6">
+              <h2 class="text-xl font-bold mb-4 text-center">Select Game Mode</h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div id="classic-mode"
+                  class="mode-card classic glass-panel p-4 flex flex-col items-center justify-center selected">
+                  <div class="text-3xl mb-2 neon-text-blue">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                      </path>
+                    </svg>
+                  </div>
+                  <h3 class="font-bold">Classic</h3>
+                  <p class="text-xs text-center mt-1 text-white/70">Standard rules</p>
+                </div>
+                <div id="twist-mode" class="mode-card twist glass-panel p-4 flex flex-col items-center justify-center">
+                  <div class="text-3xl mb-2 neon-text-purple">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z">
+                      </path>
+                    </svg>
+                  </div>
+                  <h3 class="font-bold">Twist</h3>
+                  <p class="text-xs text-center mt-1 text-white/70">Only 3 marks per player</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <h2 class="text-xl font-bold mb-4 text-center">Select Opponent</h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div id="friend-opponent"
+                  class="opponent-card friend glass-panel p-4 flex flex-col items-center justify-center selected">
+                  <div class="text-3xl mb-2 neon-text-blue">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                      </path>
+                    </svg>
+                  </div>
+                  <h3 class="font-bold">Friend</h3>
+                  <p class="text-xs text-center mt-1 text-white/70">Local multiplayer</p>
+                </div>
+                <div id="computer-opponent"
+                  class="opponent-card computer glass-panel p-4 flex flex-col items-center justify-center">
+                  <div class="text-3xl mb-2 neon-text-pink">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                      </path>
+                    </svg>
+                  </div>
+                  <h3 class="font-bold">Computer</h3>
+                  <p class="text-xs text-center mt-1 text-white/70">Play against AI</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="ai-difficulty-container" class="hidden pt-4 border-t border-white/20">
+              <p class="text-center mb-3 font-bold">AI Difficulty</p>
+              <div class="difficulty-selector">
+                <div class="difficulty-option" data-difficulty="easy">Easy</div>
+                <div class="difficulty-option" data-difficulty="medium">Medium</div>
+                <div class="difficulty-option" data-difficulty="impossible">Impossible</div>
+                <div class="difficulty-slider" style="left: 33.33%;"></div>
+              </div>
+            </div>
+
+            <button id="start-game" class="btn py-4 w-full rounded-lg neon-border-purple neon-text-purple mt-4">
+              Start Game
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Screen -->
+      <div id="game-screen" class="screen">
+        <div class="flex flex-col h-full">
+          <div class="flex justify-between items-center mb-6">
+            <button id="back-button" class="btn p-2 rounded-lg neon-border-blue">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
+                </path>
+              </svg>
+            </button>
+
+            <div id="game-mode-display" class="font-bold text-lg neon-text-purple">Classic Mode</div>
+
+            <button id="reset-button" class="btn p-2 rounded-lg neon-border-pink">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                </path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="glass-panel p-6 mb-6">
+            <div class="flex justify-between items-center mb-6">
+              <div class="flex flex-col items-center">
+                <div class="text-lg font-bold neon-text-blue">Player X</div>
+                <div id="x-moves-indicator" class="mt-2 flex">
+                  <div class="move-indicator x-active"></div>
+                  <div class="move-indicator x-active"></div>
+                  <div class="move-indicator x-active"></div>
+                </div>
+              </div>
+
+              <div class="font-bold text-white/50">VS</div>
+
+              <div class="flex flex-col items-center">
+                <div class="text-lg font-bold neon-text-pink">Player O</div>
+                <div id="o-moves-indicator" class="mt-2 flex">
+                  <div class="move-indicator o-active"></div>
+                  <div class="move-indicator o-active"></div>
+                  <div class="move-indicator o-active"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div id="game-board" class="grid grid-cols-3 gap-3 aspect-square">
+                <div class="game-cell bg-white/10" data-index="0"></div>
+                <div class="game-cell bg-white/10" data-index="1"></div>
+                <div class="game-cell bg-white/10" data-index="2"></div>
+                <div class="game-cell bg-white/10" data-index="3"></div>
+                <div class="game-cell bg-white/10" data-index="4"></div>
+                <div class="game-cell bg-white/10" data-index="5"></div>
+                <div class="game-cell bg-white/10" data-index="6"></div>
+                <div class="game-cell bg-white/10" data-index="7"></div>
+                <div class="game-cell bg-white/10" data-index="8"></div>
+              </div>
+              <div class="grid-lines">
+                <div class="grid-line horizontal"></div>
+                <div class="grid-line horizontal"></div>
+                <div class="grid-line vertical"></div>
+                <div class="grid-line vertical"></div>
+              </div>
+              <div id="win-line" class="win-line hidden"></div>
+            </div>
+          </div>
+
+          <div id="game-status" class="text-center font-bold neon-text-blue">Player X's Turn</div>
+        </div>
+      </div>
+
+      <!-- Game Over Screen -->
+      <div id="game-over-screen" class="screen">
+        <div class="flex flex-col items-center justify-center h-full">
+          <div class="glass-panel p-8 w-full max-w-sm text-center">
+            <h2 class="text-2xl font-bold neon-text-purple mb-2">Game Over</h2>
+            <div id="winner-display" class="text-6xl my-6 neon-text-blue">X</div>
+            <p id="result-message" class="text-xl mb-8 font-bold">Victory for Player X!</p>
+
+            <div class="flex space-x-4">
+              <button id="play-again" class="btn flex-1 py-3 rounded-lg neon-border-blue">
+                Play Again
+              </button>
+              <button id="new-game" class="btn flex-1 py-3 rounded-lg neon-border-pink">
+                New Game
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/tscript.js"></script>
+  <iframe height="1" width="1"
+    style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
+</body>
+
+</html>
